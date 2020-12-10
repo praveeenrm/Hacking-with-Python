@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+
+/* Body */
+body {
+	font-family: 'Noto Sans JP', sans-serif !important;
+	color: #333 !important;
+}
+
+a {
+	color: #337AB7 !important;
+	font-weight: bold;
+}
+a:hover {
+	color: #23527C !important;
+}
+
+.navbar {
+	padding-top: 0.3rem !important;
+	padding-bottom: 0.3rem !important;
+	background: #fafafa !important;
+}
+
+.nav-item {
+	font-size: 16px !important;
+}
+.nav-link {
+	color: grey !important;
+	font-family: 'Mukta', sans-serif;
+}
+.nav-link:hover {
+	color: #333 !important;
+}
+
+/* Title */
+.title {
+	background: #eee;
+	font-size: 4rem;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+@media(max-width: 768px) {
+	.title {
+		font-size: 3rem;
+	}
+}
+@media(max-width: 600px) {
+	.title {
+		font-size: 2rem;
+	}
+	.title p {
+	font-size: 14px !important;
+	}
+}
+
+.title div p {
+	font-size: 15px;
+	color: #666;
+	font-weight: 100;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.title a {
+	color: #337AB7 !important;
+}
+.title a:hover {
+	color: #23527C !important;
+}
+
+/* RIGHT */
+
+.content-section form input {
+	font-size: 12px !important;
+	width: 200px;
+}
+
+.article a h1 {
+	font-family: 'Fjalla One', sans-serif;
+}
+.article h5 {
+	font-size: 14px;
+}
+.article h6 {
+	font-size: 14px;
+}
+.article p {
+	font-size: 15px;
+	line-height: 25px;
+	margin-bottom: 10px;
+}
+
+.article a {
+	font-size: 14px;
+	font-weight: bold !important;
+}
+
+@media(max-width: 600px) {
+	.article h1 {
+		font-size: 2rem;
+	}
+	.article p {
+		font-size: 13px;
+		line-height: 22px;
+	}
+}
+
+.popular li a {
+	font-size: 13px;
+}
+
+.links li a {
+	font-size: 13px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.right h6 {
+	font-weight: bold !important;
+	font-family: 'Oswald', sans-serif;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 70px;
+	background: #eee;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+	font-size: 12px;
+}
+@media (max-width: 600px) {
+	footer p {
+		font-size: 10px;
+	}
+}
+
+body {
+	background: #fff;
+}
+
+.about h1 {
+	font-size: 2.3rem;
+	font-family: 'Fjalla One', sans-serif;
+}
+.about p {
+	font-size: 15px;
+	line-height: 25px;
+	margin: 1.2rem 0rem;
+	word-spacing: 2px;
+}
+
+kbd {
+	background: #444;
+}
+
+.resource h1 {
+	font-size: 2.3rem;
+	font-family: 'Fjalla One', sans-serif;
+}
+.resource h3 {
+	font-size: 1.2rem;
+}
+.resource p {
+	font-size: 15px;
+	line-height: 25px;
+	margin: 1.2rem 0rem;
+	word-spacing: 2px;
+}
+
+/* MEDIA */
+@media(max-width: 600px) {
+	.title {
+		font-size: 2rem;
+	}
+	.title p {
+	font-size: 14px !important;
+	}
+	.about p {
+		font-size: 14px;
+		line-height: 22px;
+	}
+}

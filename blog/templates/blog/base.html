@@ -1,0 +1,92 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/339f44cc92.js" crossorigin="anonymous"></script>
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+    <title>Python Blog</title>
+</head>
+
+<body>
+    <nav style="position: fixed; width: 100%; z-index: 2" class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="{% url 'home' %}"><i class="fa fa-home" style="color: #555"></i></a> -->
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="https://img.icons8.com/color/28/000000/python.png"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="{% url 'resource' %}">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="{% url 'mailing' %}">Mailing List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+    <div class="py-3 title">
+        <div class="container">
+            <a href="{% url 'home' %}">Python For Data Structures and Algorithm</a>
+            <p class="mb-3">Data Structures, Algorithms and Machine Learning</p>
+        </div>
+    </div>
+
+    <main role="main" class="mt-4 container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}{% endblock %}
+            </div>
+            <div class="col-md-3 right">
+                <div class="content-section mb-3">
+                    <p class="p-0 my-1">Subscribe to the <a href="#" >mailing list</a></p>
+                    <form class="my-2">
+                      <p><input type="text" placeholder="Enter your email"></p>
+                      <button class="btn btn-secondary btn-sm" disabled="">Subscribe</button>
+                    </form>
+                </div>
+                <h6><i class="fas fa-comment"></i> Social</h6>
+                <ul class="list-unstyled links">
+                  <li><a href="https://github.com/praveeenrm" target="_blank"><i class="fa fa-github"></i> Github</a></li>
+                  <li><a href="https://twitter.com/Praveen_R_M" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+                  <li><a href="https://linkedin.com/in/praveen-r-2009a0165" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+                <h6><i class="fas fa-thumbs-up"></i> All blogs</h6>
+                <ul class="list-unstyled popular">
+                    {% for blog in blogs %}
+                        <li><a href="{% url 'single-blog' blog.id %}"><i class="my-1 fas fa-file-alt"></i> {{ blog.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer>
+        <p class="mt-3 text-muted">&copy; 2020 Pragmatic Python Blog. <span class="ml-1">&#8226 Inspired from <a href="https://pbpython.com" target="_blank">pbpython.com</a></span></p>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

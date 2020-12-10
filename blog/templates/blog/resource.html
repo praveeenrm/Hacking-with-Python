@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<div class="resource">
+    <h1>Recommended Resources</h1>
+    <h4 class="my-3">Intro</h4>
+    <p>This page contains a collection of books and other content that I have found useful and hope you will as well. Any of the links which point to Amazon are affiliate links which mean this site will receive a small referral commission for any purchases through these links. The rest of the content is freely available and very useful.</p>
+    <h4>Courses</h4>
+    <br>
+    <div>
+        <h3 class="px-3">Python Beginner Course</h3>
+        <p><img class="px-3 mb-3 img-fluid" src="{% static 'blog/images/python.jpg' %}" align="left"><a href="#">Learn Python - Full Course for Beginners [Tutorial]</a> is the best beginner friendly course. This is the freecodcamp course and is focused on helping you transition your tedious Excel tasks to Python. Many people want to use Python instead of Excel but don’t know where to get started. This course shows you all you need to know to get started quickly. It gives you concrete tips and examples for getting optimal results from your setup. Finally, I cover the core Pandas concepts you can leverage to start seeing immediate results. I had a lot of fun putting this course together and hope you enjoy it.</p>
+        <hr>
+        <h3 class="px-3">Intermediate Python Course</h3>
+        <p><img class="px-3 mb-3 img-fluid" src="{% static 'blog/images/py.jpg' %}" align="left"><a href="#">Learn Python - Full Course for Beginners [Tutorial]</a> is the best beginner friendly course. This is the freecodcamp course and is focused on helping you transition your tedious Excel tasks to Python. Many people want to use Python instead of Excel but don’t know where to get started. This course shows you all you need to know to get started quickly. It gives you concrete tips and examples for getting optimal results from your setup. Finally, I cover the core Pandas concepts you can leverage to start seeing immediate results. I had a lot of fun putting this course together and hope you enjoy it.</p>
+        <hr>
+        <h3 class="px-3">Automate The Boring Stuff With Python (BOOK)</h3>
+        <p><img class="px-3 mb-3 img-fluid" src="{% static 'blog/images/ai.jpg' %}" align="left"><a href="#">Automate The Boring Stuff With Python</a>  is the best beginner friendly course. This is the freecodcamp course and is focused on helping you transition your tedious Excel tasks to Python. Many people want to use Python instead of Excel but don’t know where to get started. This course shows you all you need to know to get started quickly. It gives you concrete tips and examples for getting optimal results from your setup. Finally, I cover the core Pandas concepts you can leverage to start seeing immediate results. I had a lot of fun putting this course together and hope you enjoy it.</p>
+        <hr>
+    </div>
+</div>
+{% endblock content %}
